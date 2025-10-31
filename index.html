@@ -2,13 +2,65 @@
 <html>
 
 <head>
+    <!--specific charset-->
     <meta charset="utf-8">
+    <!--mobile friendly-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--title for browsers-->
+    <title>San Diego Top Spots</title>
+    <!--using Tailwindcss for styling-->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!--setting specific styles for use later-->
+    <style>
+        .gradient-header {
+            background: linear-gradient(to right, #FF6B35, #F7931E, #C1328E);
+        }
+        .accent-color {
+            color: #C1328E;
+        }
+        .primary-bg {
+            background-color: #FF6B35;
+        }
+        .primary-bg:hover {
+            background-color: #E65A2A;
+        }
+    </style>
 </head>
 
-<body>
-    <!-- Write your markup here -->
-
-    <!-- Don't forget to add your <script> tag here -->
+<!--styling the main page-->
+<body class="min-h-screen flex items-center justify-center p-4">
+    <!--creating a container card and styling it using predetermined style-->
+    <div class="container-card p-8 rounded-xl shadow-2x-1 w-full max-w-xl md:max-w-5xl lg:max-w-7xl gradient-header">
+        <!--set up header and styled it-->
+        <h1 class="text-4x-1 text-center mb-6 font-extrabold text-gray-50">San Diego Top Spots</h1>
+        <!--set up table and style table-->
+        <table class="min-w-full divide-y divide-gray-200 mt-6">
+            <!--style of main table-->
+            <thead class="gradient-header">
+                <tr>
+                    <!--making a column in the table and styled and gave name Name-->
+                    <th scope="col" class="px-3 py-3 text-left text-xs font-medium text-gray-50 uppercase tracking-wider w-1/4">
+                        Name
+                    </th>
+                    <!--making a column in the table and styled and gave name Description-->
+                    <th scope="col" class="px-3 py-3 text-left text-xs font-medium text-gray-50 uppercase tracking-wider w-1/2 hidden md:table-cell">
+                        Description
+                    </th>
+                    <!--making a column in the table and styled and gave name Link-->
+                    <th scope="col" class="px-3 py-3 text-right text-xs font-medium text-gray-50 uppercase tracking-wider">
+                        Link
+                    </th>
+                </tr>
+            </thead>
+            <!--styling for dividing the above columns-->
+            <tbody id="spots-table-body" class="gradient-header divide-y divide-gray-200">
+          
+            </tbody>
+        </table>
+    </div>
+    <!--jquery script-->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!--main js tag to point to js-->
+    <script src="main.js" charset="utf-8"></script>
 </body>
-
 </html>
